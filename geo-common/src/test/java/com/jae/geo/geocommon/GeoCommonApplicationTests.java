@@ -1,10 +1,10 @@
-package com.jae.geo;
+package com.jae.geo.geocommon;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GeoApplicationTests {
+class GeoCommonApplicationTests {
 
     @Test
     void contextLoads() {

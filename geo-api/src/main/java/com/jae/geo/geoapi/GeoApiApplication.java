@@ -1,13 +1,13 @@
-package com.jae.geo;
+package com.jae.geo.geoapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GeoApplication {
+public class GeoApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(GeoApplication.class, args);
+        SpringApplication.run(GeoApiApplication.class, args);
     }
 
 }

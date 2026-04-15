@@ -1,1 +1,5 @@
 rootProject.name = 'geo'
+
+include("geo-api")
+include("geo-common")
+include("geo-core")
