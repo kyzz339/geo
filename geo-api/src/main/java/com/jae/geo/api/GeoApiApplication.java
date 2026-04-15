@@ -1,4 +1,4 @@
-package com.jae.geo.geoapi;
+package com.jae.geo.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.jae.geo.geocommon;
+package com.jae.geo.common;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
