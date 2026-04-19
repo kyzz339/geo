@@ -1,4 +1,4 @@
-package com.jae.geo.common;
+package com.jae.geo.common.exception;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
