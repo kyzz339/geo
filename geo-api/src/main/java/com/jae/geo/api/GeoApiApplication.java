@@ -3,7 +3,7 @@ package com.jae.geo.api;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.jae.geo")
 public class GeoApiApplication {
 
     public static void main(String[] args) {

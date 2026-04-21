@@ -20,9 +20,9 @@ public class GlobalExceptionHandler {
         log.warn("[CustomException {} : {}]", errorCode.name() , errorCode.getMessage());
 
         return ResponseEntity
-                .status(errorCode.getHttpStatus())
+                .status(errorCode.getStatus())
                 .body(ErrorResponse.builder()
-                        .status(errorCode.getHttpStatus().value())
+                        .status(errorCode.getStatus().value())
                         .code(errorCode.name())
                         .message(errorCode.getMessage())
                         .timestamp(LocalDateTime.now())
