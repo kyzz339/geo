@@ -1,4 +1,4 @@
-package com.jae.geo.api.service;
+package com.jae.geo.service;
 
 import com.jae.geo.common.exception.CustomException;
 import com.jae.geo.common.exception.ErrorCode;
