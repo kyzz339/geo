@@ -1,5 +1,7 @@
 package com.jae.geo.config;
 
+import com.jae.geo.api.security.JwtAccessDeniedHandler;
+import com.jae.geo.api.security.JwtAuthenticationEntryPoint;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,6 +20,9 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 @RequiredArgsConstructor
 public class SecurityConfig {
 
+    private final JwtAccessDeniedHandler jwtAccessDeniedHandler;
+    private final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
+
     @Bean
     public BCryptPasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
@@ -29,6 +34,11 @@ public class SecurityConfig {
                 .cors(cors -> cors.configurationSource(conrsCorsConfigurationSource()))
                 .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+
+                       .exceptionHandling(excetpion -> excetpion
+                               .authenticationEntryPoint(jwtAuthenticationEntryPoint)
+                               .accessDeniedHandler(jwtAccessDeniedHandler)
+                       )
                 .authorizeHttpRequests(authorize -> authorize
                         .anyRequest().permitAll());
 

@@ -1,7 +1,10 @@
 dependencies {
-    implementation project(':geo-common')
     implementation project(':geo-core')
+    implementation project(':geo-common')
     implementation 'org.springframework.boot:spring-boot-starter-web'
 }
 
-bootJar { enabled = true}
+bootJar {
+    enabled = true
+    mainClass = 'com.jae.geo.GeoApiApplication'
+}
